@@ -10,4 +10,4 @@ console.log (computerSelection);
 };
 getComputerChoice();
 
-
+const playerSelection = "Rock";
