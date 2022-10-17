@@ -38,7 +38,7 @@ function playround(){
         return "It's a Tie" 
     }
     else if(computer == 'Rock' && player == 'Paper'){
-        playerScore+=1;
+        playerScore+=1;  //Plus one  when condition is made
         return("You Win this round");
     }
     else if(computer == 'Paper' && player == 'Scissors'){
@@ -48,13 +48,12 @@ function playround(){
     else if(computer == 'Scissors' && player == 'Rock'){
         playerScore+=1;
         return("You Win this round");
-        
     }else if(playerScore == 5){
         return("Yay you won the game");
     }
     else{
-        computerScore+=1;
-        if(computerScore == 5){
+        computerScore+=1;// plus one when computer condition is made
+        if(computerScore == 5){ //when computerScore reach 5 
             return("Sorry you lost the game");
         }
         return("You lost this round");
