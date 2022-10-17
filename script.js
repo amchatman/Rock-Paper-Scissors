@@ -4,6 +4,7 @@ const playerChoice = document.querySelectorAll(".playerChoice"); //Gets all clas
 const playerText = document.getElementById("playerText");
 const computerText = document.getElementById("computerText");
 const resultText = document.getElementById("resultText");
+const roundCount = document.getElementById("roundCount");
 
 /*Randomize between Rock, Paper, Scissors for computer choice*/
 const getComputerChoice = () =>{
@@ -40,4 +41,15 @@ function playround(){
         return(player == 'Rock') ? "You Win" : "You Lose"
     }
 }
+function roundCounter(){
+    for(i = 0; i <= 5; i++){
+     let count=playround();
+    roundCount.textContent = `Round: ${i}`;
+    playround(count.computer, count.player);
 
+    }
+}
+roundCounter();
+/*If computer selects rock an player returns  +1 for player count else computer count
+If computer select paper  and player returns +1 for playe coutr else +1 computer count
+If computer select  scissors and player retrn +1 for player count else +1 computer count*/
