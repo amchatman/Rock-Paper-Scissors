@@ -1,10 +1,14 @@
 let player;
 let computer;
+let playerScore = 0;
+let computerScore = 0;
 const playerChoice = document.querySelectorAll(".playerChoice"); //Gets all class name playersChoice.
 const playerText = document.getElementById("playerText");
 const computerText = document.getElementById("computerText");
 const resultText = document.getElementById("resultText");
-const roundCount = document.getElementById("roundCount");
+const computerScoreText = document.getElementById("computerScore");
+const playerScoreText = document.getElementById("playerScore");
+
 
 /*Randomize between Rock, Paper, Scissors for computer choice*/
 const getComputerChoice = () =>{
@@ -23,33 +27,37 @@ playerChoice.forEach(button => button.addEventListener("click", () => { //When b
     playerText.textContent = `Player: ${player}`;
     computerText.textContent = `Computer: ${computer}`;
     resultText.textContent = playround();
+    computerScoreText.textContent=`Computer Score: ${computerScore}`;
+    playerScoreText.textContent=`Player Score: ${playerScore}`;
 
 }));
 
 /* plays a round base on the Rock Paper Scissor rules */
 function playround(){
     if(player == computer){
-        return "It's a Tie"
+        return "It's a Tie" 
     }
-    else if(computer == 'Rock'){
-        return(player == 'Paper') ? "You Win" : "You Lose"
+    else if(computer == 'Rock' && player == 'Paper'){
+        playerScore+=1;
+        return("You Win this round");
     }
-    else if(computer == 'Paper'){
-        return(player == 'Scissors') ? "You Win" : "You Lose"
+    else if(computer == 'Paper' && player == 'Scissors'){
+        playerScore+=1;
+        return("You Win this round");
     }
-    else if(computer == 'Scissors'){
-        return(player == 'Rock') ? "You Win" : "You Lose"
+    else if(computer == 'Scissors' && player == 'Rock'){
+        playerScore+=1;
+        return("You Win this round");
+        
+    }else if(playerScore == 5){
+        return("Yay you won the game");
+    }
+    else{
+        computerScore+=1;
+        if(computerScore == 5){
+            return("Sorry you lost the game");
+        }
+        return("You lost this round");
     }
 }
-function roundCounter(){
-    for(i = 0; i <= 5; i++){
-     let count=playround();
-    roundCount.textContent = `Round: ${i}`;
-    playround(count.computer, count.player);
 
-    }
-}
-roundCounter();
-/*If computer selects rock an player returns  +1 for player count else computer count
-If computer select paper  and player returns +1 for playe coutr else +1 computer count
-If computer select  scissors and player retrn +1 for player count else +1 computer count*/
