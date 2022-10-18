@@ -15,6 +15,7 @@
     background-color:var(--fadedblack);
     width:1200px;
     margin:100px auto 100px;
+    padding-bottom:30px;
  }
  #header{
     display:flex;
@@ -44,4 +45,23 @@ a:hover{
 #score-title{
    font-size:20px;
    font-family: 'Press Start 2P', cursive;
+}
+#rules{
+   border:5px solid var(--white);
+   text-align:center;
+   width:375px;
+   margin:0 auto;
+   padding:20px;
+}
+#rules h4{
+   font-family: 'Press Start 2P', cursive;
+   text-transform:uppercase;
+}
+#rules ul{
+   padding:10px;
+}
+#rules ul li{
+   list-style:none;
+   font-family:Roboto Mono, Courier,monospace;
+   padding:1px;
 }
