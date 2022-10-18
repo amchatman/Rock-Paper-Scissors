@@ -12,15 +12,19 @@
 <body>  
 <!--Start your HTML5 code here-->
 <div id="game-container">
-    <header>
-        <h1>Rock, Paper, Scissors</h1>
-        <a href="#">How to play</a>
-    </header>
-    <h1 id="playerText">Player:</h1>
-    <h1 id="computerText">Computer:</h1>
+    <div id="header">
+        <div class="title">Rock,<span class="highlight">Paper</span>,Scissors</div>
+        <div class="rules"><a href="#">How to play</a></div>
+    </div>
+    <div id="game-titles">
+        <span id="playerText">Player:</span>
+        <span id="computerText">Computer:</span>
+    </div>
+    <div id="score-title">
+        <span id="playerScore">Player Score:</span>
+        <span id="computerScore">Computer Score:</span>
+    </div>
     <h1 id="resultText">Result:</h1>
-    <h3 id="playerScore">Player Score:</h3>
-    <h3 id="computerScore">Computer Score:</h3>
 
     <button class="playerChoice" id="rockChoice">Rock</button>
     <button class="playerChoice" id="paperChoice">Paper</button>

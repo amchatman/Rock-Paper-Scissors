@@ -5,15 +5,43 @@
     --darkgrey:#2F2F2F;
     --white:#FFFFFF;
     --fadedblack:#202020;
+    --lightgray:#6A6A6A;
  }
  body{
     background-color:var(--darkgrey);
+    color:var(--white);
  }
  #game-container{
     background-color:var(--fadedblack);
     width:1200px;
-    margin:0 auto;
+    margin:100px auto 100px;
  }
- header{
+ #header{
     display:flex;
+    justify-content:space-between;
+    padding:20px;
+    border-bottom:5px solid var(--white);
  }
+.title, a, #game-titles{
+   font-size:25px;
+   text-transform:uppercase;
+   font-family: 'Press Start 2P', cursive;
+}
+.highlight, a{
+   color:var(--lightgray);
+}
+a{
+   text-decoration:none;
+}
+a:hover{
+   color:var(--white);
+}
+#game-titles,#score-title{
+   display:flex;
+   justify-content:space-around;
+   margin-top:35px;
+}
+#score-title{
+   font-size:20px;
+   font-family: 'Press Start 2P', cursive;
+}
