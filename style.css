@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+ *{
+    margin:0;
+    padding:0;
+    --darkgrey:#2F2F2F;
+    --white:#FFFFFF;
+    --fadedblack:#202020;
+ }
+ body{
+    background-color:var(--darkgrey);
+ }
+ #game-container{
+    background-color:var(--fadedblack);
+    width:1200px;
+    margin:0 auto;
+ }
+ header{
+    display:flex;
+ }

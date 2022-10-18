@@ -49,12 +49,21 @@ function playround(){
         playerScore+=1;
         return("You Win this round");
     }else if(playerScore == 5){
-        return("Yay you won the game");
+        //Disable all buttons once player score hits 5
+        document.getElementById("rockChoice").disabled = true;
+        document.getElementById("paperChoice").disabled = true;
+        document.getElementById("scissorChoice").disabled = true;
+        
+        return("Yay you won the game! Please refresh the page");
     }
     else{
         computerScore+=1;// plus one when computer condition is made
-        if(computerScore == 5){ //when computerScore reach 5 
-            return("Sorry you lost the game");
+        if(computerScore === 5){ //when computerScore reach 5 
+            //Disable all button once player score hits 5
+            document.getElementById("rockChoice").disabled = true;
+            document.getElementById("paperChoice").disabled = true;
+            document.getElementById("scissorChoice").disabled = true;
+            return("Sorry you lost the game! Please refresh the page");
         }
         return("You lost this round");
     }

@@ -11,17 +11,32 @@
 
 <body>  
 <!--Start your HTML5 code here-->
-<h1 id="playerText">Player:</h1>
-<h1 id="computerText">Computer:</h1>
-<h1 id="resultText">Result:</h1>
-<h3 id="playerScore">Player Score:</h3>
-<h3 id="computerScore">Computer Score:</h3>
+<div id="game-container">
+    <header>
+        <h1>Rock, Paper, Scissors</h1>
+        <a href="#">How to play</a>
+    </header>
+    <h1 id="playerText">Player:</h1>
+    <h1 id="computerText">Computer:</h1>
+    <h1 id="resultText">Result:</h1>
+    <h3 id="playerScore">Player Score:</h3>
+    <h3 id="computerScore">Computer Score:</h3>
 
-<button class="playerChoice">Rock</button>
-<button class="playerChoice">Paper</button>
-<button class="playerChoice">Scissors</button>
-<button id="playAgain">Play Again?</button>
+    <button class="playerChoice" id="rockChoice">Rock</button>
+    <button class="playerChoice" id="paperChoice">Paper</button>
+    <button class="playerChoice" id="scissorChoice">Scissors</button>
 
+    <div id="rules">
+        <h2>How to play</h2>
+        <ul>
+            <li>Rock beats Scissors</li>
+            <li>Paper beats Rock</li>
+            <li>Scissors beats Paper</li>
+            <li>If both choose the option it a tie and no points are given</li>
+            <li>First to five is declare the winner</li>
+        </ul>
+    </div>
+</div>
 <!--JavaScript link to your js file. * Not require if your not using JavaScript-->
 <script src="script.js"></script>
 </body>
