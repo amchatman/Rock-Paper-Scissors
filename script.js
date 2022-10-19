@@ -34,38 +34,34 @@ playerChoice.forEach(button => button.addEventListener("click", () => { //When b
 
 /* plays a round base on the Rock Paper Scissor rules */
 function playround(){
-    if(player == computer){
-        return "It's a Tie" 
-    }
-    else if(computer == 'Rock' && player == 'Paper'){
-        playerScore+=1;  //Plus one  when condition is made
-        return("You Win this round");
-    }
-    else if(computer == 'Paper' && player == 'Scissors'){
+
+    if((computer == 'Rock' && player == 'Paper')||
+       (computer == 'Paper' && player == 'Scissors')||
+       (computer == 'Scissors' && player == 'Rock')){
+        
         playerScore+=1;
-        return("You Win this round");
+
+        if (playerScore == 5){
+            disableButton();
+            return "You Win! Refresh the page to play again."
+        }
+    return("You won this round");
     }
-    else if(computer == 'Scissors' && player == 'Rock'){
-        playerScore+=1;
-        return("You Win this round");
-    }else if(playerScore == 5){
-        //Disable all buttons once player score hits 5
+    else if(computer == player) {
+        return "Draw";
+    }else{
+        computerScore+=1;
+        if(computerScore == 5){
+            disableButton();
+            return "Game Over! You Lose."
+        }
+        return ("You lose this round");
+    }
+}
+//Function that disable the button from being click
+function disableButton(){
         document.getElementById("rockChoice").disabled = true;
         document.getElementById("paperChoice").disabled = true;
         document.getElementById("scissorChoice").disabled = true;
-        
-        return("Yay you won the game! Please refresh the page");
-    }
-    else{
-        computerScore+=1;// plus one when computer condition is made
-        if(computerScore === 5){ //when computerScore reach 5 
-            //Disable all button once player score hits 5
-            document.getElementById("rockChoice").disabled = true;
-            document.getElementById("paperChoice").disabled = true;
-            document.getElementById("scissorChoice").disabled = true;
-            return("Sorry you lost the game! Please refresh the page");
-        }
-        return("You lost this round");
-    }
 }
-
+    
