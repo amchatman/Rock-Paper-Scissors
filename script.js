@@ -53,7 +53,7 @@ function playround(){
         computerScore+=1;
         if(computerScore == 5){
             disableButton();
-            return "Game Over! You Lose."
+            return "Game Over! You Lose. Refresh the page to play again."
         }
         return ("You lose this round");
     }
