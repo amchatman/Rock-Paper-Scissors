@@ -14,18 +14,18 @@
  }
  #game-container{
     background-color:var(--fadedblack);
-    width:1200px;
-    margin:60px auto;
-    padding-bottom:30px;
+    width:75rem;
+    margin:3.75rem auto;
+    padding-bottom:1.875rem;
  }
  #header{
     display:flex;
     justify-content:space-between;
-    padding:20px;
+    padding:1.25rem;
     border-bottom:5px solid var(--white);
  }
 .title, a, #game-titles{
-   font-size:25px;
+   font-size:1.5625rem;
    text-transform:uppercase;
    font-family: 'Press Start 2P', cursive;
 }
@@ -41,46 +41,46 @@ a:hover{
 #game-titles,#score-title{
    display:flex;
    justify-content:space-around;
-   margin-top:35px;
+   margin-top:2.1875rem;
 }
 #score-title{
-   font-size:20px;
+   font-size:1.25rem;
    font-family: 'Press Start 2P', cursive;
 }
 #rules{
    border:5px solid var(--white);
    text-align:center;
-   width:375px;
+   width:23.4375rem;
    margin:0 auto;
-   padding:20px;
+   padding:1.25rem;
 }
 #rules h4{
    font-family: 'Press Start 2P', cursive;
    text-transform:uppercase;
 }
 #rules ul{
-   padding:10px;
+   padding:0.625rem;
 }
 #rules ul li{
    list-style:none;
    font-family: 'Roboto Mono', monospace;
-   padding:1px;
+   padding:0.0625rem;
 }
 #resultText{
    font-family: 'Roboto Mono', monospace;
    text-align:center;
-   margin:20px 0;
-   padding:15px 0;
+   margin:1.25rem 0;
+   padding:0.9375rem 0;
 }
 #button-container{
-   width:375px;
+   width:23.4375rem;
    margin:0 auto;
    text-align:center;
-   padding:20px;
+   padding:1.25rem;
 }
 .playerChoice{
-   width:100px;
-   height:50px;
+   width:6.25rem;
+   height:3.125rem;
    border:5px solid var(--white);
    background-color:var(--fadedblack);
    color:var(--white);
