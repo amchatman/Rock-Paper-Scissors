@@ -81,10 +81,21 @@ a:hover{
 .playerChoice{
    width:6.25rem;
    height:3.125rem;
-   border:5px solid var(--white);
+   border:0.3125rem solid var(--white);
    background-color:var(--fadedblack);
    color:var(--white);
 }
 .playerChoice:hover{
    background-color:var(--lightgray);
+}
+footer{
+   text-align:center;
+   font-family:'Roboto Mono', monospace;
+   font-size:1rem;
+   margin:0.625rem;
+}
+footer a{
+   font-family:'Roboto Mono', monospace;
+   font-size:1rem;
+   text-transform:lowercase;
 }
