@@ -48,7 +48,7 @@ a:hover{
    font-family: 'Press Start 2P', cursive;
 }
 #rules{
-   border:5px solid var(--white);
+   border:0.3125rem solid var(--white);
    text-align:center;
    width:23.4375rem;
    margin:0 auto;
